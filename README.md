@@ -4,21 +4,24 @@ Taken from - https://www.graphql-java.com/tutorials/getting-started-with-spring-
 
 Queried API using GraphQLPlayground desktop app - https://github.com/prisma-labs/graphql-playground/releases
 
+Application creates endpoint -  http://localhost:8080/graphql
+
 Example Query:
 
 ```
 
 {
-  bookById(id: "book-1"){
+collectionById(id: "collection-1") {
     id
     name
-    pageCount
-    author {
+    collectionDate
+    Owner {
       firstName
       lastName
     }
   }
 }
+
 
 ```
 
@@ -28,13 +31,13 @@ Example Response:
 
 {
   "data": {
-    "bookById": {
-      "id": "book-1",
-      "name": "Harry Potter and the Philosopher's Stone",
-      "pageCount": 223,
-      "author": {
-        "firstName": "Joanne",
-        "lastName": "Rowling"
+    "collectionById": {
+      "id": "collection-1",
+      "name": "Banana",
+      "collectionDate": 441806400,
+      "Owner": {
+        "firstName": "Joe",
+        "lastName": "Bloggs"
       }
     }
   }

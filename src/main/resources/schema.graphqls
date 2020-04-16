@@ -1,17 +1,17 @@
 #Top level field - returns book details specified below
 #Schema Definition Language or SDL
 type Query {
-    bookById(id: ID): Book
+    collectionById(id: ID): Collection
 }
 
-type Book {
+type Collection {
     id: ID
     name: String
-    pageCount: Int
-    author: Author
+    collectionDate: Int
+    Owner: Owner
 }
 
-type Author {
+type Owner {
     id: ID
     firstName: String
     lastName: String
