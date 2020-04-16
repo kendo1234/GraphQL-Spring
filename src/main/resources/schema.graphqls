@@ -1,0 +1,18 @@
+#Top level field - returns book details specified below
+#Schema Definition Language or SDL
+type Query {
+    bookById(id: ID): Book
+}
+
+type Book {
+    id: ID
+    name: String
+    pageCount: Int
+    author: Author
+}
+
+type Author {
+    id: ID
+    firstName: String
+    lastName: String
+}
